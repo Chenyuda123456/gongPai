@@ -1,0 +1,12 @@
+version: '3'
+services:
+  coffee-ui:
+    image: coffee-ui:1.0
+    container_name: coffee-ui
+    network_mode: host
+    ports:
+      - "80:80"
+    volumes:
+      - /data/webapps/coffee-ui/logs:/var/log/nginx
+    environment:
+      - TZ=Asia/Shanghai
